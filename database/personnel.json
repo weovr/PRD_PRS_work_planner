@@ -1,0 +1,268 @@
+[
+  {
+    "person_id": "EQ-HAL-001",
+    "name": "Håkon Andreassen",
+    "company": "Equinor",
+    "role": "Disiplinleder Roterende",
+    "platform_id": "TROLL-A",
+    "certifications": ["GWO Basic Safety", "NOGEPA", "H2S", "BOSIET"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2026-11-15",
+      "BOSIET": "2027-03-22",
+      "H2S": "2026-08-10",
+      "NOGEPA": "2027-01-14"
+    },
+    "competencies": ["Sentrifugalkompressorer", "Gassturbiner", "Alignment", "Vibrasjonsanalyse"],
+    "vendor_personnel": false,
+    "currently_offshore": true,
+    "current_platform": "TROLL-A"
+  },
+  {
+    "person_id": "EQ-KBS-002",
+    "name": "Kristine Berge Svendsen",
+    "company": "Equinor",
+    "role": "Vedlikeholdsingeniør Roterende",
+    "platform_id": "TROLL-A",
+    "certifications": ["GWO Basic Safety", "NOGEPA", "H2S", "BOSIET"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2027-02-28",
+      "BOSIET": "2026-06-30",
+      "H2S": "2027-05-20",
+      "NOGEPA": "2026-09-15"
+    },
+    "competencies": ["Sentrifugalkompressorer", "Tetningssystemer", "SAP PM"],
+    "vendor_personnel": false,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "EQ-TFN-003",
+    "name": "Tor Fredrik Nygaard",
+    "company": "Equinor",
+    "role": "Operasjonsteknikker Roterende",
+    "platform_id": "TROLL-A",
+    "certifications": ["GWO Basic Safety", "NOGEPA", "H2S", "BOSIET"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2025-12-01",
+      "BOSIET": "2026-04-10",
+      "H2S": "2026-01-18",
+      "NOGEPA": "2026-07-22"
+    },
+    "competencies": ["Sentrifugalkompressorer", "Smøresystemer", "Instrumentering"],
+    "vendor_personnel": false,
+    "currently_offshore": true,
+    "current_platform": "TROLL-A"
+  },
+  {
+    "person_id": "EQ-RBO-004",
+    "name": "Rune Bjørnstad Olsen",
+    "company": "Equinor",
+    "role": "Disiplinleder Roterende",
+    "platform_id": "GULLFAKS-C",
+    "certifications": ["GWO Basic Safety", "NOGEPA", "H2S", "BOSIET"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2027-04-15",
+      "BOSIET": "2027-09-01",
+      "H2S": "2027-03-30",
+      "NOGEPA": "2027-06-20"
+    },
+    "competencies": ["Sentrifugalkompressorer", "Gassturbiner", "Boreskopinspeksjon", "SAP PM"],
+    "vendor_personnel": false,
+    "currently_offshore": true,
+    "current_platform": "GULLFAKS-C"
+  },
+  {
+    "person_id": "EQ-SGH-005",
+    "name": "Silje Grøv Haugen",
+    "company": "Equinor",
+    "role": "Vedlikeholdsingeniør",
+    "platform_id": "GULLFAKS-C",
+    "certifications": ["GWO Basic Safety", "NOGEPA", "H2S", "BOSIET"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2026-08-20",
+      "BOSIET": "2026-10-14",
+      "H2S": "2026-12-05",
+      "NOGEPA": "2026-11-28"
+    },
+    "competencies": ["Gassturbiner", "Boreskopinspeksjon", "Safran"],
+    "vendor_personnel": false,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "EQ-PML-006",
+    "name": "Per Magnus Larssen",
+    "company": "Equinor",
+    "role": "Plattformsjef",
+    "platform_id": "TROLL-A",
+    "certifications": ["GWO Basic Safety", "NOGEPA", "H2S", "BOSIET", "PTW Utstedelsesmyndighet"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2028-01-10",
+      "BOSIET": "2028-03-05",
+      "H2S": "2027-11-20",
+      "NOGEPA": "2028-02-14",
+      "PTW Utstedelsesmyndighet": "2027-06-30"
+    },
+    "competencies": ["PTW", "Sikkerhetsstyring", "LOTO"],
+    "vendor_personnel": false,
+    "currently_offshore": true,
+    "current_platform": "TROLL-A"
+  },
+  {
+    "person_id": "EQ-OAK-007",
+    "name": "Ole Andreas Knutsen",
+    "company": "Equinor",
+    "role": "Operasjonsteknikker Roterende",
+    "platform_id": "SNORRE-B",
+    "certifications": ["GWO Basic Safety", "NOGEPA", "H2S", "BOSIET"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2026-05-12",
+      "BOSIET": "2026-07-30",
+      "H2S": "2026-04-22",
+      "NOGEPA": "2026-09-08"
+    },
+    "competencies": ["Stempelkompressorer", "Sentrifugalkompressorer", "Alignment"],
+    "vendor_personnel": false,
+    "currently_offshore": true,
+    "current_platform": "SNORRE-B"
+  },
+  {
+    "person_id": "VND-MR-BH-001",
+    "name": "Marco Rossi",
+    "company": "Baker Hughes / Nuovo Pignone",
+    "role": "Senior Field Service Engineer",
+    "platform_id": null,
+    "certifications": ["GWO Basic Safety", "BOSIET", "H2S", "NOGEPA"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2026-10-20",
+      "BOSIET": "2026-12-15",
+      "H2S": "2026-09-05",
+      "NOGEPA": "2027-01-30"
+    },
+    "competencies": ["Sentrifugalkompressorer", "Bundle-overhaul", "Gassturbiner", "Alignment"],
+    "vendor_personnel": true,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "VND-LI-BH-002",
+    "name": "Lars Isaksen",
+    "company": "Baker Hughes / Nuovo Pignone",
+    "role": "Technical Field Advisor",
+    "platform_id": null,
+    "certifications": ["GWO Basic Safety", "BOSIET", "H2S"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2027-03-15",
+      "BOSIET": "2027-05-20",
+      "H2S": "2027-02-10"
+    },
+    "competencies": ["Sentrifugalkompressorer", "Gassturbiner", "Tetningssystemer", "Vibrasjon"],
+    "vendor_personnel": true,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "VND-AT-SE-001",
+    "name": "Astrid Thorvaldsen",
+    "company": "Siemens Energy",
+    "role": "Field Service Engineer — Turbines",
+    "platform_id": null,
+    "certifications": ["GWO Basic Safety", "BOSIET", "H2S", "NOGEPA"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2026-07-08",
+      "BOSIET": "2026-09-22",
+      "H2S": "2026-06-14",
+      "NOGEPA": "2026-08-30"
+    },
+    "competencies": ["Gassturbiner SGT-serien", "Hot section overhaul", "Boreskopinspeksjon"],
+    "vendor_personnel": true,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "VND-OP-MAN-001",
+    "name": "Olav Pedersen",
+    "company": "MAN Energy Solutions",
+    "role": "Field Service Engineer — Compressors",
+    "platform_id": null,
+    "certifications": ["GWO Basic Safety", "BOSIET", "H2S"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2027-08-14",
+      "BOSIET": "2027-10-05",
+      "H2S": "2027-07-20"
+    },
+    "competencies": ["Stempelkompressorer", "Sentrifugalkompressorer", "Tetningssystemer"],
+    "vendor_personnel": true,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "VND-ES-FS-001",
+    "name": "Erik Solberg",
+    "company": "Flowserve",
+    "role": "Field Service Engineer — Pumps",
+    "platform_id": null,
+    "certifications": ["GWO Basic Safety", "BOSIET", "H2S"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2027-01-25",
+      "BOSIET": "2027-04-10",
+      "H2S": "2026-12-30"
+    },
+    "competencies": ["Sentrifugalpumper", "Mekaniske tetninger", "Pumperevisjon"],
+    "vendor_personnel": true,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "VND-HM-JC-001",
+    "name": "Hilde Magnusson",
+    "company": "John Crane",
+    "role": "Seal Applications Engineer",
+    "platform_id": null,
+    "certifications": ["GWO Basic Safety", "BOSIET", "H2S"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2026-06-18",
+      "BOSIET": "2026-08-12",
+      "H2S": "2026-05-25"
+    },
+    "competencies": ["Mekaniske tetninger", "Gassdempede tetninger (DGS)", "Tettingssystemer kompressorer"],
+    "vendor_personnel": true,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "VND-PJ-SKF-001",
+    "name": "Pål Johnsen",
+    "company": "SKF",
+    "role": "Condition Monitoring Specialist",
+    "platform_id": null,
+    "certifications": ["GWO Basic Safety", "BOSIET", "H2S"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2028-02-20",
+      "BOSIET": "2028-04-15",
+      "H2S": "2028-01-08"
+    },
+    "competencies": ["Rulleleager", "Tilstandsovervåkning", "Vibrasjonsmåling", "Smøring"],
+    "vendor_personnel": true,
+    "currently_offshore": false,
+    "current_platform": null
+  },
+  {
+    "person_id": "EQ-AKN-008",
+    "name": "Anne Karin Nordveit",
+    "company": "Equinor",
+    "role": "Vedlikeholdsplanlegger",
+    "platform_id": "TROLL-A",
+    "certifications": ["GWO Basic Safety", "NOGEPA", "H2S", "BOSIET"],
+    "cert_expiry": {
+      "GWO Basic Safety": "2027-09-12",
+      "BOSIET": "2027-11-28",
+      "H2S": "2027-08-15",
+      "NOGEPA": "2027-10-03"
+    },
+    "competencies": ["SAP PM", "Safran", "Vedlikeholdsplanlegging", "Reservedelstyring"],
+    "vendor_personnel": false,
+    "currently_offshore": false,
+    "current_platform": null
+  }
+]

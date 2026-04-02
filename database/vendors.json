@@ -1,0 +1,132 @@
+[
+  {
+    "vendor_id": "BH-NP",
+    "name": "Baker Hughes / Nuovo Pignone",
+    "short_name": "BHNP",
+    "contact_person": "Marco Rossi",
+    "contact_email": "marco.rossi@bakerhughes.com",
+    "contact_phone": "+39 055 423 211",
+    "technical_contact": "Lars Isaksen",
+    "technical_email": "lars.isaksen@bakerhughes.com",
+    "country": "Italy / Norway",
+    "lead_time_days_standard": 90,
+    "lead_time_days_critical": 30,
+    "frame_agreement_id": "FA-2024-NP-001",
+    "frame_agreement_expiry": "2027-12-31",
+    "specialities": [
+      "Sentrifugalkompressorer",
+      "Gassturbiner",
+      "Bundle-overhaul",
+      "Aksialstempelkompressorer"
+    ],
+    "mob_time_days": 14
+  },
+  {
+    "vendor_id": "SE",
+    "name": "Siemens Energy",
+    "short_name": "SiemensE",
+    "contact_person": "Klaus Weber",
+    "contact_email": "k.weber@siemens-energy.com",
+    "contact_phone": "+49 911 433 7700",
+    "technical_contact": "Astrid Thorvaldsen",
+    "technical_email": "astrid.thorvaldsen@siemens-energy.com",
+    "country": "Germany / Norway",
+    "lead_time_days_standard": 120,
+    "lead_time_days_critical": 45,
+    "frame_agreement_id": "FA-2023-SE-003",
+    "frame_agreement_expiry": "2026-12-31",
+    "specialities": [
+      "Gassturbiner SGT-serien",
+      "Generatorer",
+      "Turbinkompressorer",
+      "Hot section overhaul"
+    ],
+    "mob_time_days": 21
+  },
+  {
+    "vendor_id": "MAN-ES",
+    "name": "MAN Energy Solutions",
+    "short_name": "MAN-ES",
+    "contact_person": "Friedrich Baumann",
+    "contact_email": "f.baumann@man-es.com",
+    "contact_phone": "+49 89 360 980",
+    "technical_contact": "Olav Pedersen",
+    "technical_email": "olav.pedersen@man-es.com",
+    "country": "Germany / Norway",
+    "lead_time_days_standard": 100,
+    "lead_time_days_critical": 40,
+    "frame_agreement_id": "FA-2023-MES-002",
+    "frame_agreement_expiry": "2026-06-30",
+    "specialities": [
+      "Stempelkompressorer",
+      "Sentrifugalkompressorer RG-serien",
+      "Turbokompressorer"
+    ],
+    "mob_time_days": 18
+  },
+  {
+    "vendor_id": "FS",
+    "name": "Flowserve",
+    "short_name": "Flowserve",
+    "contact_person": "James Thornton",
+    "contact_email": "j.thornton@flowserve.com",
+    "contact_phone": "+1 972 443 6500",
+    "technical_contact": "Erik Solberg",
+    "technical_email": "erik.solberg@flowserve.com",
+    "country": "USA / Norway",
+    "lead_time_days_standard": 75,
+    "lead_time_days_critical": 25,
+    "frame_agreement_id": "FA-2024-FS-005",
+    "frame_agreement_expiry": "2027-06-30",
+    "specialities": [
+      "Sentrifugalpumper",
+      "Stempelpumper",
+      "Mekaniske tetninger",
+      "Pumperevisjon"
+    ],
+    "mob_time_days": 10
+  },
+  {
+    "vendor_id": "JC",
+    "name": "John Crane",
+    "short_name": "JohnCrane",
+    "contact_person": "David Matthews",
+    "contact_email": "d.matthews@johncrane.com",
+    "contact_phone": "+1 847 967 2400",
+    "technical_contact": "Hilde Magnusson",
+    "technical_email": "hilde.magnusson@johncrane.com",
+    "country": "USA / Sweden",
+    "lead_time_days_standard": 60,
+    "lead_time_days_critical": 20,
+    "frame_agreement_id": "FA-2024-JC-007",
+    "frame_agreement_expiry": "2027-03-31",
+    "specialities": [
+      "Mekaniske tetninger",
+      "Gassdempede tetninger (DGS)",
+      "Tetningssystemer kompressorer"
+    ],
+    "mob_time_days": 7
+  },
+  {
+    "vendor_id": "SKF",
+    "name": "SKF",
+    "short_name": "SKF",
+    "contact_person": "Anders Lindqvist",
+    "contact_email": "anders.lindqvist@skf.com",
+    "contact_phone": "+46 31 337 1000",
+    "technical_contact": "Pål Johnsen",
+    "technical_email": "pal.johnsen@skf.com",
+    "country": "Sweden / Norway",
+    "lead_time_days_standard": 45,
+    "lead_time_days_critical": 14,
+    "frame_agreement_id": "FA-2024-SKF-009",
+    "frame_agreement_expiry": "2028-01-31",
+    "specialities": [
+      "Rulleleager",
+      "Glideleager",
+      "Tilstandsovervåkning",
+      "Vibrasjonsmåling"
+    ],
+    "mob_time_days": 5
+  }
+]

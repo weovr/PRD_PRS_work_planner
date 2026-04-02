@@ -1,0 +1,252 @@
+{
+  "bundle_change_centrifugal_compressor": {
+    "template_id": "bundle_change_centrifugal_compressor",
+    "name": "Sentrifugalkompressor bundleskifte",
+    "description": "Fullstendig rotorbundte-skifte for sentrifugalkompressor",
+    "wo_type": "PM02",
+    "estimated_pob_days": 15,
+    "estimated_hours": 480,
+    "crew_required": {
+      "equinor_technicians": 2,
+      "vendor_technicians": 4,
+      "discipline_lead": 1
+    },
+    "ptw_requirements": ["Hot Work", "Confined Space Entry", "Isolasjon og låsing (LOTO)", "Løfteoperasjon"],
+    "risk_level": "Høy",
+    "sap_wo_type": "PM02",
+    "required_spare_parts": [
+      "NP-BDL-PCL804-001",
+      "SKF-BRG-6326-M",
+      "JC-DGS-PCL804-001",
+      "JC-DGS-PCL804-002"
+    ],
+    "required_documentation": [
+      "Overhalingsmanual fra leverandør",
+      "P&ID tegning",
+      "Alignment-rapport forrige overhaul",
+      "PTW-søknad",
+      "Løfteplan og SJA",
+      "Materialbestillingsbektreftelse"
+    ],
+    "activities": [
+      "1. Avslutning og trykkavlastning",
+      "2. Isolasjon og låsing (LOTO)",
+      "3. Åpning kompressorhus og visuell inspeksjon",
+      "4. Løfting og utfjerning av gammel bundle",
+      "5. Rengjøring og inspeksjon av kompressorhus",
+      "6. Kontroll av kobling og mellomstykke",
+      "7. Installasjon av ny bundle",
+      "8. Aksialinnstilling og alignment",
+      "9. Mekanisk ferdigstillelse og lukking",
+      "10. Smøresystemkontroll og fylling",
+      "11. Tetthetsprøving (20 bar N2)",
+      "12. Pre-oppstartsjekk iht sjekkliste",
+      "13. Oppstart og idriftsettelse",
+      "14. Driftsverifikasjon (2 timer)"
+    ],
+    "vendor_speciality_required": ["Sentrifugalkompressorer", "Bundle-overhaul"],
+    "estimated_cost_nok": 4200000
+  },
+  "gt_borescope_inspection": {
+    "template_id": "gt_borescope_inspection",
+    "name": "Gassturbine boreskopinspeksjon",
+    "description": "Boreskopinspeksjon hot section og kompressordel gassturbine",
+    "wo_type": "PM03",
+    "estimated_pob_days": 3,
+    "estimated_hours": 32,
+    "crew_required": {
+      "equinor_technicians": 1,
+      "vendor_technicians": 2,
+      "discipline_lead": 0
+    },
+    "ptw_requirements": ["Isolasjon og låsing (LOTO)", "Arbeid i høyde (hvis aktuelt)"],
+    "risk_level": "Middels",
+    "sap_wo_type": "PM03",
+    "required_spare_parts": [],
+    "required_documentation": [
+      "Boreskopinspeksjonsmanual",
+      "P&ID tegning gassturbinsystem",
+      "PTW-søknad",
+      "Inspeksjonsrapport fra forrige boreskop"
+    ],
+    "activities": [
+      "1. Avslutning og avkjøling av turbine (min. 4 timer)",
+      "2. Isolasjon og låsing (LOTO)",
+      "3. Fjerning av inspeksjonsluker",
+      "4. Boreskopinspeksjon brennkammer (alle sektorer)",
+      "5. Boreskopinspeksjon turbinstator 1. og 2. etasje",
+      "6. Boreskopinspeksjon kompressordel",
+      "7. Fotografering og dokumentasjon av funn",
+      "8. Lukking av inspeksjonsluker",
+      "9. Opplåsning og klargjøring",
+      "10. Rapportskrivning og funn-evaluering"
+    ],
+    "vendor_speciality_required": ["Gassturbiner", "Hot section overhaul"],
+    "estimated_cost_nok": 290000
+  },
+  "gt_hot_section_overhaul": {
+    "template_id": "gt_hot_section_overhaul",
+    "name": "Gassturbine hot section overhaul",
+    "description": "Full overhaul av hot section inkl. turbinblader, stator og brennkammer",
+    "wo_type": "PM02",
+    "estimated_pob_days": 12,
+    "estimated_hours": 240,
+    "crew_required": {
+      "equinor_technicians": 1,
+      "vendor_technicians": 3,
+      "discipline_lead": 1
+    },
+    "ptw_requirements": ["Hot Work", "Isolasjon og låsing (LOTO)", "Løfteoperasjon"],
+    "risk_level": "Høy",
+    "sap_wo_type": "PM02",
+    "required_spare_parts": [
+      "SE-TB1-SGT600-KIT",
+      "SE-LINER-SGT600-001",
+      "SE-VANE1-SGT600-KIT"
+    ],
+    "required_documentation": [
+      "Turbinoverhalingsmanual",
+      "Leverandørens arbeidsbeskrivelse (MSI)",
+      "PTW-søknad",
+      "Løfteplan for turbindeler",
+      "Kalibreringsattest måleverktøy"
+    ],
+    "activities": [
+      "1. Avslutning og avkjøling (min. 8 timer)",
+      "2. Isolasjon og låsing (LOTO)",
+      "3. Fjerning av tilgangsluke og toppkappe",
+      "4. Inspeksjon og demontering brennkammer",
+      "5. Fjerning turbinblader 1. og 2. etasje",
+      "6. Fjerning turbinstator 1. etasje",
+      "7. Inspeksjon turbinrotor og bladspor",
+      "8. Installasjon nye turbinblader",
+      "9. Installasjon ny stator",
+      "10. Montering brennkammer med ny liner",
+      "11. Lukking og tetthetsprøving",
+      "12. Pre-oppstartsinspeksjon",
+      "13. Boreskopverifikasjon etter oppstart"
+    ],
+    "vendor_speciality_required": ["Gassturbiner", "Hot section overhaul"],
+    "estimated_cost_nok": 2200000
+  },
+  "seal_replacement_centrifugal": {
+    "template_id": "seal_replacement_centrifugal",
+    "name": "Tettingsbytte sentrifugalkompressor",
+    "description": "Bytte av mekanisk tetning / DGS på sentrifugalkompressor",
+    "wo_type": "PM02",
+    "estimated_pob_days": 7,
+    "estimated_hours": 112,
+    "crew_required": {
+      "equinor_technicians": 2,
+      "vendor_technicians": 2,
+      "discipline_lead": 0
+    },
+    "ptw_requirements": ["Confined Space Entry", "Isolasjon og låsing (LOTO)"],
+    "risk_level": "Middels",
+    "sap_wo_type": "PM02",
+    "required_spare_parts": [
+      "JC-DGS-PCL804-001",
+      "JC-DGS-PCL804-002"
+    ],
+    "required_documentation": [
+      "Tetningsleverandørens monteringsveiledning",
+      "P&ID tetningssystem",
+      "PTW-søknad",
+      "Sertifikat for nytt tetningssett"
+    ],
+    "activities": [
+      "1. Avslutning og trykkavlastning kompressor",
+      "2. Isolasjon og låsing (LOTO)",
+      "3. Demontering av tetningstilgang",
+      "4. Fjerning av gammel tetning",
+      "5. Rengjøring og inspeksjon av tetningshus",
+      "6. Installasjon av ny tetning iht leverandørveiledning",
+      "7. Funksjonsprøve tetningstilgang",
+      "8. Lekkasjetest spylegasssystem",
+      "9. Opplåsning og oppstart",
+      "10. Verifikasjon gasslekkasjemåling"
+    ],
+    "vendor_speciality_required": ["Mekaniske tetninger", "Gassdempede tetninger (DGS)"],
+    "estimated_cost_nok": 950000
+  },
+  "bearing_replacement": {
+    "template_id": "bearing_replacement",
+    "name": "Lagerbytte roterende utstyr",
+    "description": "Rutinemessig eller korrektivt lagerbytte på roterende utstyr",
+    "wo_type": "PM01",
+    "estimated_pob_days": 4,
+    "estimated_hours": 48,
+    "crew_required": {
+      "equinor_technicians": 1,
+      "vendor_technicians": 1,
+      "discipline_lead": 0
+    },
+    "ptw_requirements": ["Isolasjon og låsing (LOTO)"],
+    "risk_level": "Lav",
+    "sap_wo_type": "PM01",
+    "required_spare_parts": [
+      "SKF-BRG-6326-M",
+      "SKF-BRG-NJ2324"
+    ],
+    "required_documentation": [
+      "Lagermonteringsanvisning",
+      "PTW-søknad",
+      "Alignment-rapport"
+    ],
+    "activities": [
+      "1. Avslutning og sikring av maskin",
+      "2. Isolasjon og låsing (LOTO)",
+      "3. Fjerning av lagerlokk og tilgang",
+      "4. Demontering av gammelt lager",
+      "5. Inspeksjon av lagersete og aksel",
+      "6. Montering av nytt lager (oppvarming til 80°C)",
+      "7. Smørefylling og lukking",
+      "8. Alignment-kontroll",
+      "9. Oppstart og vibrasjonskontroll"
+    ],
+    "vendor_speciality_required": ["Rulleleager", "Glideleager"],
+    "estimated_cost_nok": 220000
+  },
+  "pump_overhaul": {
+    "template_id": "pump_overhaul",
+    "name": "Pumperevisjon",
+    "description": "Fullstendig revisjon av sentrifugalpumpe inkl. impeller og tettingsskift",
+    "wo_type": "PM02",
+    "estimated_pob_days": 6,
+    "estimated_hours": 80,
+    "crew_required": {
+      "equinor_technicians": 1,
+      "vendor_technicians": 2,
+      "discipline_lead": 0
+    },
+    "ptw_requirements": ["Confined Space Entry (hvis aktuelt)", "Isolasjon og låsing (LOTO)"],
+    "risk_level": "Middels",
+    "sap_wo_type": "PM02",
+    "required_spare_parts": [
+      "FS-IMP-DVMX-001",
+      "FS-SEAL-DVMX-001",
+      "SKF-BRG-6326-M"
+    ],
+    "required_documentation": [
+      "Pumpereparasjonsmanual",
+      "P&ID pumpesystem",
+      "PTW-søknad",
+      "Hydrostisk trykktest-sertifikat"
+    ],
+    "activities": [
+      "1. Avslutning og isolasjon pumpe",
+      "2. Isolasjon og låsing (LOTO)",
+      "3. Fjerning av pumpe fra rørsystem",
+      "4. Demontering pumpehus",
+      "5. Inspeksjon impeller, hus og aksel",
+      "6. Bytte av slitte komponenter",
+      "7. Montering og balansering",
+      "8. Montering mekanisk tetning",
+      "9. Reinstallasjon og alignment",
+      "10. Hydrostisk trykktesting",
+      "11. Oppstart og ytelsesverifikasjon"
+    ],
+    "vendor_speciality_required": ["Sentrifugalpumper", "Pumperevisjon"],
+    "estimated_cost_nok": 720000
+  }
+}

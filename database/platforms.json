@@ -1,0 +1,72 @@
+[
+  {
+    "platform_id": "TROLL-A",
+    "name": "Troll A",
+    "type": "Semi-submersible",
+    "area": "Hordaland",
+    "location": "North Sea",
+    "pob_limit": 450,
+    "helideck_capacity": 19,
+    "maintenance_contact": "Hans Erik Larsen",
+    "contact_email": "hel@equinor.com",
+    "base_port": "Bergen",
+    "water_depth_m": 303,
+    "production_start": 1996
+  },
+  {
+    "platform_id": "GULLFAKS-C",
+    "name": "Gullfaks C",
+    "type": "Concrete GBS",
+    "area": "Rogaland",
+    "location": "North Sea",
+    "pob_limit": 390,
+    "helideck_capacity": 19,
+    "maintenance_contact": "Rune Olsen",
+    "contact_email": "ro@equinor.com",
+    "base_port": "Stavanger",
+    "water_depth_m": 217,
+    "production_start": 1989
+  },
+  {
+    "platform_id": "SNORRE-B",
+    "name": "Snorre B",
+    "type": "Semi-submersible",
+    "area": "Rogaland",
+    "location": "North Sea",
+    "pob_limit": 280,
+    "helideck_capacity": 18,
+    "maintenance_contact": "Kari Bjørnstad",
+    "contact_email": "kb@equinor.com",
+    "base_port": "Stavanger",
+    "water_depth_m": 310,
+    "production_start": 2001
+  },
+  {
+    "platform_id": "JSV-PII",
+    "name": "Johan Sverdrup PII",
+    "type": "Fixed jacket",
+    "area": "Rogaland",
+    "location": "North Sea",
+    "pob_limit": 500,
+    "helideck_capacity": 22,
+    "maintenance_contact": "Tor Haakon Nilsen",
+    "contact_email": "thn@equinor.com",
+    "base_port": "Stavanger",
+    "water_depth_m": 120,
+    "production_start": 2022
+  },
+  {
+    "platform_id": "ASGARD-B",
+    "name": "Åsgard B",
+    "type": "Semi-submersible",
+    "area": "Møre",
+    "location": "Norwegian Sea",
+    "pob_limit": 360,
+    "helideck_capacity": 19,
+    "maintenance_contact": "Sigrid Haugen",
+    "contact_email": "sh@equinor.com",
+    "base_port": "Kristiansund",
+    "water_depth_m": 240,
+    "production_start": 2000
+  }
+]
