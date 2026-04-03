@@ -1,184 +1,124 @@
 """
-Interactive CLI demo entry point for the Equinor Rotating Equipment Agent System.
-Run with: python demo/run_demo.py
+Equinor Roterende Utstyr — AI Agent Demo
+
+Interaktiv samtale med en AI-agent som har tilgang til utstyrs- og vedlikeholdsdatabasen.
+Skriv spørsmålet ditt på norsk — agenten finner selv ut hva den trenger å slå opp.
+
+Start: python demo/run_demo.py
 """
 
 import sys
 import os
 
-# Ensure project root is on path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from agents.orchestrator import OrchestratorAgent
-from tools.report_generator import (
-    section_header, sub_header,
-    format_equipment_summary, format_job_plan,
-    format_safety_report, format_vendor_info,
-    format_execution_status,
-)
 
 DB_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Labels shown when the agent calls a tool — makes AI reasoning visible
+TOOL_LABELS = {
+    "get_equipment":            "Slår opp utstyrsinformasjon...",
+    "get_work_order_history":   "Henter arbeidsordrehistorikk...",
+    "get_open_work_orders":     "Henter åpne arbeidsordre...",
+    "get_vendor":               "Slår opp leverandørinformasjon...",
+    "get_spare_parts":          "Sjekker reservedelsstatus...",
+    "get_job_template":         "Henter jobbmal og sjekkliste...",
+    "get_platform":             "Henter plattforminformasjon...",
+    "get_personnel":            "Sjekker personell og sertifikater...",
+    "calculate_job_timeline":   "Beregner jobbplan og tidsfrister...",
+    "calculate_revised_timeline": "Beregner revidert tidsplan...",
+}
+
 BANNER = """
-===================================================================
-  EQUINOR — Roterende Utstyr Agent System (Demo)
-  Roterende utstyr | Offshore vedlikeholdsplanlegging
-===================================================================
-  ADVARSEL: Kun demonstrasjonssystem med fiktive data.
-  Ingen tilknytning til Equinors systemer (SAP, Safran, o.l.)
-===================================================================
+╔══════════════════════════════════════════════════════════════╗
+║      EQUINOR — Roterende Utstyr AI Agent (PSR Demo)        ║
+╚══════════════════════════════════════════════════════════════╝
+
+  Hei! Jeg er din AI-assistent for vedlikeholdsplanlegging av
+  roterende utstyr på Equinors offshore-plattformer.
+
+  Jeg har tilgang til databaser for utstyr, arbeidsordre,
+  leverandører, reservedeler og personell.
+
+  Eksempler på hva du kan spørre om:
+    • Planlegg bundleskifte K-3101 på Troll A, oppstart 1. september 2026
+    • Hva er statusen på GT-4201 på Gullfaks C?
+    • Baker Hughes melder 3 ukers forsinkelse på bundle til K-3101
+    • Hvilke arbeidsordre er åpne akkurat nå?
+    • Hvem hos Siemens Energy kontakter vi for GT-4201?
+    • Sjekk sertifikatstatus for bemanningen på Troll A
+
+  Skriv 'ny samtale' for å starte på nytt, 'avslutt' for å avslutte.
+──────────────────────────────────────────────────────────────────
 """
 
-MENU = """
-Velg ett av følgende scenarioer:
-  [1] Planlegg bundleskifte K-3101, Troll A
-  [2] Planlegg boreskopinspeksjon GT-4201, Gullfaks C
-  [3] Leverandørforsinkelse og replanning (Baker Hughes / K-3101)
-  [4] Sjekk utstyrsstatus (fritekst eksempel: K-4201)
-  [5] Vis åpne arbeidsordre
-  [6] Egendefinert forespørsel (fritekst)
-  [q] Avslutt
-
-Ditt valg: """
+EKSEMPLER = """
+  Scenarioer for demonstrasjon:
+    [1] Planlegg bundleskifte K-3101 Troll A, oppstart 1. september 2026
+    [2] Planlegg boreskopinspeksjon GT-4201 Gullfaks C
+    [3] Baker Hughes melder 21 dagers forsinkelse på bundle NP-BDL-PCL804-001
+    [4] Skriv eksempel (fritekst)
+"""
 
 
-def run_scenario_1():
-    """Run scenario 01 inline."""
-    import scenarios.scenario_01_bundle_change as s1
-    s1.run_scenario()
+def on_tool_call(tool_name: str, tool_input: dict) -> None:
+    """Print a progress indicator when the agent calls a tool."""
+    label = TOOL_LABELS.get(tool_name, f"Kaller verktøy: {tool_name}...")
+    # Show key parameters so it's clear what's being looked up
+    detail = ""
+    if "tag" in tool_input:
+        detail = f" [{tool_input['tag']}]"
+    elif "vendor_id" in tool_input or "vendor_name" in tool_input:
+        detail = f" [{tool_input.get('vendor_id') or tool_input.get('vendor_name')}]"
+    elif "template_id" in tool_input:
+        detail = f" [{tool_input['template_id']}]"
+    elif "platform_id" in tool_input:
+        detail = f" [{tool_input['platform_id']}]"
+    print(f"  ⟳ {label}{detail}", flush=True)
 
 
-def run_scenario_2():
-    """Run scenario 02 inline."""
-    import scenarios.scenario_02_gt_inspection as s2
-    s2.run_scenario()
-
-
-def run_scenario_3():
-    """Run scenario 03 inline."""
-    import scenarios.scenario_03_vendor_delay as s3
-    s3.run_scenario()
-
-
-def run_equipment_check():
-    """Interactive equipment check."""
-    tag = input("\n  Skriv inn utstyrstagg (f.eks. K-4201, GT-3101A, P-6101): ").strip().upper()
-    if not tag:
-        print("  Ingen tagg oppgitt.")
-        return
-
-    orchestrator = OrchestratorAgent(db_path=DB_PATH)
-    eq_result = orchestrator.agents["equipment"].run({"tag": tag})
-
-    if eq_result.get("status") == "ok":
-        print(format_equipment_summary(eq_result["data"]))
-    elif eq_result.get("status") == "not_found":
-        print(f"\n  Utstyr ikke funnet: {tag}")
-        print(f"  Tilgjengelige tagger inkluderer: K-3101, K-3102, K-4201, K-5301,")
-        print(f"  GT-3101A, GT-3101B, GT-4201, GT-5401, P-6101, P-6102,")
-        print(f"  P-9201, P-9202, K-7101, K-8101, K-8102")
-    else:
-        print(f"\n  Feil: {eq_result['data'].get('message')}")
-
-
-def run_open_work_orders():
-    """Show all open work orders."""
-    orchestrator = OrchestratorAgent(db_path=DB_PATH)
-    exec_result = orchestrator.agents["execution"].run({"action": "status"})
-    print(format_execution_status(exec_result["data"]))
-
-
-def run_freetext_request():
-    """Run a free-text user request through the orchestrator."""
-    print("\n  Eksempler:")
-    print("    - Planlegg bundleskifte K-3101 Troll A oppstart 2026-09-01")
-    print("    - Boreskopinspeksjon GT-5401 Åsgard B")
-    print("    - Sjekk leverandør Baker Hughes")
-    print("    - Pumperevisjon P-6101 Troll A")
-    print()
-    request = input("  Din forespørsel: ").strip()
-    if not request:
-        print("  Ingen forespørsel oppgitt.")
-        return
-
-    orchestrator = OrchestratorAgent(db_path=DB_PATH)
-    print(f"\n  Behandler: \"{request}\"")
-    print()
-
-    results = orchestrator.run(request)
-    intent = results.get("intent", "ukjent")
-    print(f"  Tolket forespørsel som: {intent}")
-    print(f"  Utstyrstagg: {results.get('equipment_tag', 'N/A')}")
-    print()
-
-    agent_results = results.get("agent_results", {})
-
-    if "equipment" in agent_results:
-        eq = agent_results["equipment"]
-        if eq.get("status") == "ok":
-            print(format_equipment_summary(eq["data"]))
-
-    if "planning" in agent_results:
-        plan_r = agent_results["planning"]
-        if plan_r.get("status") == "ok":
-            print(format_job_plan(plan_r["data"]["plan"]))
-
-    if "safety" in agent_results:
-        safety_r = agent_results["safety"]
-        if safety_r.get("status") == "ok":
-            print(format_safety_report(safety_r["data"]))
-
-    if "vendor_lookup" in agent_results:
-        vl = agent_results["vendor_lookup"]
-        if vl.get("status") == "ok":
-            print(format_vendor_info(vl["data"]))
-
-    if "vendor_email" in agent_results:
-        ve = agent_results["vendor_email"]
-        if ve.get("status") == "ok":
-            print(sub_header("E-post utkast — Mobiliseringsforespørsel"))
-            print(ve["data"]["email_text"])
-
-    if "execution" in agent_results:
-        er = agent_results["execution"]
-        if er.get("status") == "ok":
-            print(format_execution_status(er["data"]))
-
-    if "vendor" in agent_results:
-        vr = agent_results["vendor"]
-        if vr.get("status") == "ok":
-            print(format_vendor_info(vr["data"]))
-
-    if "error" in agent_results:
-        print(f"\n  Feil: {agent_results['error'].get('message')}")
-
-
-def main():
+def main() -> None:
     print(BANNER)
 
+    try:
+        agent = OrchestratorAgent(db_path=DB_PATH)
+    except EnvironmentError as e:
+        print(f"\n  FEIL: {e}\n")
+        print("  Sett API-nøkkel og prøv igjen:")
+        print("    export ANTHROPIC_API_KEY=din_nøkkel\n")
+        sys.exit(1)
+
     while True:
-        choice = input(MENU).strip().lower()
-
-        if choice == "1":
-            run_scenario_1()
-        elif choice == "2":
-            run_scenario_2()
-        elif choice == "3":
-            run_scenario_3()
-        elif choice == "4":
-            run_equipment_check()
-        elif choice == "5":
-            run_open_work_orders()
-        elif choice == "6":
-            run_freetext_request()
-        elif choice in ("q", "quit", "exit", "avslutt"):
-            print("\n  Avslutter Equinor Roterende Utstyr Agent System. Ha en god arbeidsdag!\n")
+        try:
+            user_input = input("\nDu: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n\n  Avslutter. Ha en god arbeidsdag!\n")
             sys.exit(0)
-        else:
-            print(f"  Ugyldig valg: '{choice}'. Velg 1-6 eller q.")
 
-        input("\n  Trykk Enter for å fortsette...")
+        if not user_input:
+            continue
+
+        lower = user_input.lower()
+
+        if lower in ("avslutt", "exit", "quit", "q"):
+            print("\n  Avslutter. Ha en god arbeidsdag!\n")
+            sys.exit(0)
+
+        if lower in ("ny samtale", "reset", "ny", "start på nytt"):
+            agent.reset()
+            print("\n  Samtalehistorikk slettet. Klar for ny sesjon.\n")
+            continue
+
+        if lower == "hjelp" or lower == "eksempler":
+            print(EKSEMPLER)
+            continue
+
+        # Run the agent — tool calls are shown as progress indicators
         print()
+        response = agent.chat(user_input, on_tool_call=on_tool_call)
+        print(f"\nAgent: {response}\n")
+        print("──────────────────────────────────────────────────────────────────")
 
 
 if __name__ == "__main__":
