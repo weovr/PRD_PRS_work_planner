@@ -1,1 +1,1 @@
-# Agents package for Equinor Rotating Equipment Agent System
+# Agents package — AI-powered rotating equipment maintenance agent
