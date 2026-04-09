@@ -1,4 +1,4 @@
-# Equinor PSR — Roterende Utstyr Agent System
+# Equinor GTS — Roterende Utstyr Agent System
 
 Et konseptdemonstrasjonssystem for vedlikeholdsplanlegging av roterende utstyr på Equinors offshore-plattformer, bygget som et **Claude Code multi-agent system**.
 
